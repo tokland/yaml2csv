@@ -1,0 +1,10 @@
+---
+path1:
+  path11:
+    key11a: value11a
+    key11b: value11b
+  path12:
+    path121:
+      key121a: value121a
+path2:
+  key2a: value2a
