@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 require 'test/unit'
-require File.dirname(__FILE__) + '/../../lib/yaml2csv'
+require 'yaml2csv'
 
 YAML_EXAMPLE =<<-EOF
 ---
@@ -24,10 +24,10 @@ EOF
 
 class TextYamlExtensions < Test::Unit::TestCase
   def test_yaml2csv
-    assert_equal CSV_EXAMPLE1, YAML::yaml2csv(YAML_EXAMPLE)    
+    assert_equal CSV_EXAMPLE1, Yaml2csv::yaml2csv(YAML_EXAMPLE)    
   end
     
   def test_csv2yaml
-    assert_equal YAML_EXAMPLE, YAML::csv2yaml(CSV_EXAMPLE1)    
+    assert_equal YAML_EXAMPLE, Yaml2csv::csv2yaml(CSV_EXAMPLE1)    
   end      
 end

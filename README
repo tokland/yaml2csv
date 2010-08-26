@@ -20,9 +20,9 @@ Will be converted into:
     path1/path12/path121,key121a,value121a
     path2,key2a,value2a
 
-Source YAML files should contain only hash and string values. While non-string 
+YAML source files should contain only hashes and string values. While non-string 
 values (i.e. arrays, booleans) are allowed, they will be treated as strings 
-thus their format will be lost.
+thus their original format will be lost.
 
 == Dependencies
 
@@ -33,15 +33,15 @@ ya2yaml: http://github.com/ptb/ya2yaml/tree/master
 === As Ruby module
 
     require 'yaml2csv'
-    YAML::yaml2csv(string, :field_separator => ';')
-    YAML::csv2yaml(string)
+    Yaml2csv::yaml2csv(string, :field_separator => ';')
+    Yaml2csv::csv2yaml(string)
 
 === From command line
 
 Convert file.yaml into CSV format:
 
-    $ yaml2csv_conv file.yml
+    $ yaml2csv file.yml
 
 Convert file.csv into YAML format (using ';' as field separator)
 
-    $ yaml2csv_conv -f";" -r file.csv
+    $ yaml2csv -f";" -r file.csv

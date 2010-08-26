@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 require 'test/unit'
-require File.dirname(__FILE__) + '/../../lib/hash_extensions'
+require 'yaml2csv/hash_extensions'
+Yaml2csv.extend_hash
 
 EXAMPLE_HASH = {
   "a" => {

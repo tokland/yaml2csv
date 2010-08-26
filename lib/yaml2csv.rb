@@ -4,12 +4,12 @@ require 'yaml'
 require 'csv'
 require 'ya2yaml'
 
-require File.dirname(__FILE__) + '/hash_extensions'
+require 'yaml2csv/hash_extensions'
+Yaml2csv.extend_hash
 
-module YAML
+module Yaml2csv
   # Convert a string containing YAML data to a CSV string
-  #
-  def YAML.yaml2csv(yamldata, options = {})
+  def self.yaml2csv(yamldata, options = {})
     hash = YAML::load(yamldata)
     output = ""
     csv_writer = CSV::BasicWriter.new(output, options[:field_separator])
@@ -21,7 +21,7 @@ module YAML
   end
   
   # Convert a string containing CSV values to a YAML string
-  def YAML.csv2yaml(csvdata, options = {})
+  def self.csv2yaml(csvdata, options = {})
     rows = CSV::parse(csvdata, options[:field_separator])
     walk_array = rows.map do |strpath, key, value| 
       [strpath.split("/").map(&:to_s), key.to_s, value.to_s]
