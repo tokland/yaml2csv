@@ -19,9 +19,9 @@ EXAMPLE_ARY = [
 
 class TestHashExtensions < Test::Unit::TestCase 
   def test_store_path
-    assert_equal({1 => 2, 3 => {4 => 5}}, \
+    assert_equal({1 => 2, 3 => {4 => 5}},
       {1 => 2}.merge_path([3, 4], 5))      
-    assert_equal({1 => 2, 3 => {4 => 5, 5 => 50}}, \
+    assert_equal({1 => 2, 3 => {4 => 5, 5 => 50}},
       {1 => 2, 3 => {5 => 50}}.merge_path([3, 4], 5))      
   end
 
