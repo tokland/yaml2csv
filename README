@@ -24,10 +24,6 @@ YAML source files should contain only hashes and string values. While non-string
 values (i.e. arrays, booleans) are allowed, they will be treated as strings 
 thus their original format will be lost.
 
-== Dependencies
-
-ya2yaml: http://github.com/ptb/ya2yaml/tree/master
-
 == Usage 
 
 === As Ruby module
