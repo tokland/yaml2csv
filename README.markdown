@@ -26,8 +26,8 @@ Only YAML files containing hashes and string values are supported (that includes
 ### As Ruby module
 
     require 'yaml2csv'
-    YAML::yaml2csv(string, :field_separator => ';')
-    YAML::csv2yaml(string)
+    Yaml2csv::yaml2csv(string, :field_separator => ';')
+    Yaml2csv::csv2yaml(string)
 
 ### From command line
 
