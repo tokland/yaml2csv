@@ -26,7 +26,7 @@ Only YAML files containing hashes and string values are supported (that includes
 ### As Ruby module
 
     require 'yaml2csv'
-    Yaml2csv::yaml2csv(string, :field_separator => ';')
+    Yaml2csv::yaml2csv(string, :field_separator => ',')
     Yaml2csv::csv2yaml(string)
 
 ### From command line
@@ -35,6 +35,6 @@ Convert file.yaml into CSV format:
 
     $ yaml2csv_conv file.yml
 
-Convert file.csv into YAML format (using ';' as field separator)
+Convert file.csv into YAML format (using ',' as field separator)
 
-    $ yaml2csv_conv -f";" -r file.csv
+    $ yaml2csv_conv -f"," -r file.csv
