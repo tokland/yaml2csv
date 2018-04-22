@@ -33,8 +33,8 @@ Only YAML files containing hashes and string values are supported (that includes
 
 Convert file.yaml into CSV format:
 
-    $ yaml2csv_conv file.yml
+    $ yaml2csv file.yml
 
 Convert file.csv into YAML format (using ',' as field separator)
 
-    $ yaml2csv_conv -f"," -r file.csv
+    $ yaml2csv -f"," -r file.csv
